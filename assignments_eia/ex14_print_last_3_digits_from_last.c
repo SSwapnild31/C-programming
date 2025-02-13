@@ -16,15 +16,9 @@ void main()
 	{
 		r=num%10;
 		c++;
-		rev=rev*10+r;
+		printf("%d ",r);
 		if(c==3)
-		{
-			for(r=0;rev;rev=rev/10)
-			{
-				r=rev%10;
-				printf("%d ",r);
-			}
-		}
+		 break;
 	}
 	printf("\n");
 }
