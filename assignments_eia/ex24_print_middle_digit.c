@@ -12,7 +12,7 @@ void main()
 	printf("Enter number : ");
 	scanf("%d",&num);
 
-	for(n=num,c=0;num;num=num/10)
+	for(n=num,c=1;num;num=num/10)
 	{
 		r=num%10;
 		c++;
@@ -25,7 +25,10 @@ void main()
 		r=n%10;
 		cc++;
 		if(cc==c)
-		printf("middle : %d\n",r);
+		{
+			printf("middle : %d\n",r);
+			break;
+		}
 	}
 	//printf("count : %d\n",c,num);
 }
