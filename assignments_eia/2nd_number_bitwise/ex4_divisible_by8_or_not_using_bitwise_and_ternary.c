@@ -5,5 +5,5 @@ void main()
 	printf("Enter number : ");
 	scanf("%d",&num);
 	
-	printf("yes\n") : printf("no\n");
+	num&7 ? printf("yes\n") : printf("no\n");
 }
