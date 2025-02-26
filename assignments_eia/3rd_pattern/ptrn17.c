@@ -9,13 +9,24 @@
 #include<stdio.h>
 void main()
 {
-	int i,j;
+	int i,j,k,num;
 	for(i=0;i<5;i++)
 	{
-		for(j=0;j<=i;j++)
+		for(j=0,num=2;j<=i;)
 		{
-				
-		}	
+			for(k=2;k<num;k++)
+			{
+				if(num%k==0)
+					break;
+			}
+			if(num==k)
+			{
+				printf("%d ",num);
+				j++;
+			}
+			num++;
+		}
+		printf("\n");
 	}
 	
 }
