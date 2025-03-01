@@ -2,7 +2,7 @@
 void main()
 {
 	int ar[5],i,j,ele;
-	ele=sizeof(a)/sizeof(a[0]);
+	ele=sizeof(ar)/sizeof(ar[0]);
 	printf("Enter array elements : \n");
 	for(i=0;i<ele;)
 	{
