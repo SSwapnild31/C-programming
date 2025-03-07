@@ -15,8 +15,8 @@ void main()
 		printf("%d ",a[i]);
 	printf("\n");
 	
-	for(i=ele;i>1;i--)
-		a[i]=a[i-1];
+	for(i=ele;i>0;i--)
+		a[i]=a[i-2];
 	a[0]=n1;
 	a[1]=n2;
 
