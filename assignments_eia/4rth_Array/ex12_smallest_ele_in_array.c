@@ -12,8 +12,8 @@ void main()
 	sm=a[0];
 	for(i=0;i<ele;i++)
 	{
-		if(a[0]>a[i])
+		if(sm>a[i])
 			sm=a[i];
 	}
-	printf("res : %d\n",sm);
+	printf("smallest ele is %d\n",sm);
 }
