@@ -1,39 +1,42 @@
 #include<stdio.h>
 void print(const int *,int);
-void merge(int *,int *,int *,int,int);
+int merge(int *,int *,int *,int,int);
 void main()
 {
 	int a[2],b[4],c[6];
-	int ele,el1,i;
+	int ele,el1,el2,i;
 	ele=sizeof(c)/sizeof(c[0]);
 	el1=sizeof(a)/sizeof(a[0]);
-
+	el2=sizeof(a)/sizeof(a[0]);
 	printf("enter a[2] ele :\n");
-	for(i=0;i<2;i++)
+	for(i=0;i<el1;i++)
 		scanf("%d",a+i);
 	
 	printf("enter b[4] ele :\n");
-	for(i=0;i<4;i++)
+	for(i=0;i<el2;i++)
 		scanf("%d",b+i);
 	
-	merge(a,b,c,ele,el1);
+	ele=merge(a,b,c,el1,el2);
 	print(c,ele);
 }
 
-void merge(int *p,int *q,int *r,int ele,int el1)
+int merge(int *p,int *q,int *r,int el1,int el2)
 {
-	int i,k;
-	for(i=0,k=0;k<ele;i++)
+	int i=0,j=0,k=0;
+	while(i<el1 && j<el2)
 	{
-		if(el1)
-		{
-			r[k]=p[i];
-			k++;
-			el1--;
-		}
-		r[k]=q[i];	
-		k++;
+		r[k++]=p[i++];
+		r[k++]=q[j++];
 	}
+	while(i<el1)
+	{
+		r[k++]=p[i++];
+	}
+	while(j<el2)
+	{
+		r[k++]=q[i++];
+	}
+	return k;
 }
 
 void print(const int *p,int ele)
