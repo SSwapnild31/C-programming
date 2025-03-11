@@ -7,12 +7,12 @@ void main()
 	int ele,el1,el2,i;
 	ele=sizeof(c)/sizeof(c[0]);
 	el1=sizeof(a)/sizeof(a[0]);
-	el2=sizeof(a)/sizeof(a[0]);
-	printf("enter a[2] ele :\n");
+	el2=sizeof(b)/sizeof(b[0]);
+	printf("enter a[] ele :\n");
 	for(i=0;i<el1;i++)
 		scanf("%d",a+i);
 	
-	printf("enter b[4] ele :\n");
+	printf("enter b[] ele :\n");
 	for(i=0;i<el2;i++)
 		scanf("%d",b+i);
 	
@@ -34,7 +34,7 @@ int merge(int *p,int *q,int *r,int el1,int el2)
 	}
 	while(j<el2)
 	{
-		r[k++]=q[i++];
+		r[k++]=q[j++];
 	}
 	return k;
 }
