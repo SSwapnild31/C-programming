@@ -18,7 +18,9 @@ void str_rev(char *p)
 	len=str_len(p);
 	q=p+len-1;
 	while(p<q)
-	{
+	{en=0;
+ 53         while(*p)
+
 		t=*p;
 		*p=*q;
 		*q=t;
@@ -28,7 +30,7 @@ void str_rev(char *p)
 }
 int str_len(const char *p)
 {
-	int len;
+	int len=0;
 	while(*p)
 	{
 		len++;
