@@ -9,7 +9,7 @@ void rotate_fun(int *a, int ele ,int n);*/
 #include<stdio.h>
 
 void print(const int *,int);
-void rotate_arr(const int *,int *,int,int);
+int rotate_arr(int *,int,int);
 
 void main()
 {
@@ -28,7 +28,7 @@ void main()
 	print(a,ele);
 }
 
-int rotate_arr(const int *a,int ele,int n)
+int rotate_arr(int *a,int ele,int n)
 {
 	int i,j=0,b[6];
 	for(i=ele-n;i<ele;i++)
