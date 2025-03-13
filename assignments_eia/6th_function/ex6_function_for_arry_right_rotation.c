@@ -13,23 +13,34 @@ void rotate_arr(const int *,int *,int,int);
 
 void main()
 {
-	int a[6],b[6],ele,i,r;
+	int a[6],ele,i,n;
 	ele=6;
 	
 	printf("Enter arry ele :\n");
 	for(i=0;i<ele;i++)
 		scanf("%d",&a[i]);
+	
 	printf("Enter rotation :\n");
-	scanf("%d",&r);
+	scanf("%d",&n);
 
 	print(a,ele);
-	ele=rotate_arr(a,b,ele,r);
-	print(b,ele);
+	ele=rotate_arr(a,ele,n);
+	print(a,ele);
 }
 
-int rotate_arr(const int *a,int *b,int ele,int r)
+int rotate_arr(const int *a,int ele,int n)
 {
-	int i,
+	int i,j=0,b[6];
+	for(i=ele-n;i<ele;i++)
+		b[j++]=a[i];
+	
+	for(i=0;i<ele-n;i++)
+		b[j++]=a[i];
+	
+	for(i=0;i<j;i++)
+		a[i]=b[i];
+	
+	return j;
 
 }
 
