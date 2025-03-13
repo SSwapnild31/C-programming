@@ -12,7 +12,7 @@ void main()
 	int i,j,k,num;
 	for(i=0;i<5;i++)
 	{
-		for(j=0,num=2;j<=i;)
+		for(j=0,num=2;j<=i;num++)
 		{
 			for(k=2;k<num;k++)
 			{
@@ -24,7 +24,6 @@ void main()
 				printf("%d ",num);
 				j++;
 			}
-			num++;
 		}
 		printf("\n");
 	}
