@@ -8,7 +8,7 @@ void main()
 	printf("Enter string : ");
 	scanf("%s",s);
 	
-	printf("before string : %s\n",s)
+	printf("before string : %s\n",s);
 	count=del_digit(s);
 	printf("count of digit : %d\n",count);
 	printf("after string : %s\n",s);
@@ -16,12 +16,16 @@ void main()
 
 int del_digit(char *s)
 {
-	int i,c=0;
+	int i,c=0,k;
 	for(i=0;s[i];i++)
 	{
-		if(s[i]>='48' && s[i]<='57')
+		if(s[i]>='0' && s[i]<='9')
 		{
 			c++;
+			for(k=i;s[k];k++)
+				s[k]=s[k+1];
+			i--;
 		}
 	}
+	return c;
 }
