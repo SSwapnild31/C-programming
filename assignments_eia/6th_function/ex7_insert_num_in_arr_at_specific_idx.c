@@ -22,7 +22,7 @@ void main()
 void insert_arr(int *a,int ele,int num,int idx)
 {
 	int i;
-	for(i=ele;i>idx;i--)
+	for(i=ele-1;i>idx;i--)
 		a[i]=a[i-1];
 	a[idx]=num;
 }
