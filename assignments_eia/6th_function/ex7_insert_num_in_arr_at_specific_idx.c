@@ -23,12 +23,8 @@ void insert_arr(int *a,int ele,int num,int idx)
 {
 	int i;
 	for(i=ele;i>idx;i--)
-	{
 		a[i]=a[i-1];
-		printf("a[i] : %d = a[i-1] : %d\n",a[i],a[i-1]);
-	}
 	a[idx]=num;
-	printf("a[i] : %d i : %d\n",a[idx],i);
 }
 
 void print(int *p,int ele)
