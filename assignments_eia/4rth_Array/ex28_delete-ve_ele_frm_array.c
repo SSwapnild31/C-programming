@@ -5,7 +5,7 @@ void main()
 {
 	int a[6],ele,i;
 	ele=6;
-	int nz;
+	int nz;				//new size
 	printf("Enter array ele :\n");
 	for(i=0;i<ele;i++)
 		scanf("%d",&a[i]);
