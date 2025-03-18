@@ -12,12 +12,14 @@ void main()
 	{
 		if(a[i]%2!=0)
 		{
-			a[j]=a[i];
-			j++;	
+			for(j=i;j<ele-1;j++)
+				a[j]=a[j+1];
+			i--;
+			ele--;
 		}
 	}
 
-	for(i=0;i<j;i++)
+	for(i=0;i<ele;i++)
 		printf("%d ",a[i]);
 	printf("\n");
 }
