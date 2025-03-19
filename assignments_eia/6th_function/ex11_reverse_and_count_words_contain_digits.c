@@ -36,10 +36,16 @@ void rev_word(char *s)
 
 int count_word(char *s)
 {
-	int i,c=0;
+	int i,c=0,flag=0;
 	for(i=0;s[i];i++)
 	{
-		if(s[i]==' ')
-			c++;
+		if(s[i]>=0 && s[i]<='9')
+			flag=1;
+		if(a[i]==' ')
+			if(flag==1)
+			{
+				c++;
+				flag=0;
+			}
 	}
 }
