@@ -17,10 +17,28 @@ void main()
 
 int odd_palindrome(int *p,int ele)
 {
-	for(int i;i<ele;i++)
-	{
-		for()
-	}
+	int rev,r;
+        for(int i=0;i<ele;i++)
+        {
+                if(p[i]%2!=0)
+                {
+        	        int temp=p[i];
+                        for(rev=0;temp;temp/=10)
+                        {
+                                r=temp%10;
+                                rev=rev*10+r;
+                        }
+                        if(p[i]==rev)
+                        {
+                                for(temp=i;temp<ele;temp++)
+                                        p[temp]=p[temp+1];
+                                i--;
+                        	ele--;
+                        }
+                }
+        }
+	return ele;
+
 }
 
 void print(const int *p,int ele)
