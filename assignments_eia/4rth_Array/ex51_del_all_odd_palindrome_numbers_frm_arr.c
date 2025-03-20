@@ -38,7 +38,6 @@ int odd_palindrome(int *p,int ele)
                 }
         }
 	return ele;
-
 }
 
 void print(const int *p,int ele)
