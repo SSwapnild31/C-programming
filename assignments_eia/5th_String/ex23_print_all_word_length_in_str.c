@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 char * my_strchr(const char *,char);
-//int my_strlen(const char *);
+int my_strlen(const char *);
 void main()
 {
 	char s[20];
@@ -16,6 +16,7 @@ void main()
 		printf("%d ",q-p);
 		p=q+1;
 	}
+	printf("%d",my_strlen(p));
 	printf("\n");
 }
 
@@ -29,9 +30,10 @@ char * my_strchr(const char *p,char ch)
 	return 0;
 }
 
-/*int my_strlen(const char *p)
+int my_strlen(const char *p)
 {
 	int len;
-	for(len=0;;len++);
+	for(len=0;p[len];len++);
 	return len;
-}*/
+}
+
