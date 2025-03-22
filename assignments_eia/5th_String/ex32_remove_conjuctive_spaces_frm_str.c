@@ -13,7 +13,7 @@ void main()
 		{
 			for(int j=i+1;s[j];j++)
 				s[j-1]=s[j];
-     s[j-1]=[j];
+			s[j-1]=[j];
 			i--;
 		}
 		i++;
