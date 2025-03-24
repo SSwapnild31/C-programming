@@ -22,7 +22,7 @@ char * my_strchr(char *p,char ch)
 {
 	int flag=0;
 	int len=strlen(p);
-	for(int i=0;i<len;i++)
+	for(int i=0;i<=len;i++)
 	{
 		if(p[i]>='0' && p[i]<='9')
 			flag=1;
