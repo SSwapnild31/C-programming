@@ -7,19 +7,21 @@ void main()
 {
 	char m[50];
 	printf("Enter string : ");
-	scanf("%[^\n]",m);
+	scanf(" %[^\n]",m);
 	
 	printf("Before : %s\n",m);
 	
-	char *p,*q,*lw;
-	int len=0,len1;
+	char *p=m,*q=0,*start,*end;
+	int len=0,len1=0;
+
 	while(q=my_strchr(p,' '))
 	{
 		len1=q-p;
 		if(len1>len)
 		{
 			len=len1;
-			lw=p;
+			start=p;
+			end=q;
 		}
 		p=q+1;
 	}
@@ -27,9 +29,11 @@ void main()
 	if(len1>len)
 	{
 		len=len1;
-		lw=p;
+		start=p;
+		delete(start,start+len);
 	}
-	delete(p,p+len-1);
+	else
+		delete(start,end+1);
 
 	printf("After : %s\n",m);
 }
@@ -41,10 +45,11 @@ void delete(char *p,char *q)
 
 char * my_strchr(char *p,char ch)
 {
-	for(int i=0;p[i];i++)
+	while(*p)
 	{
-		if(p[i]==ch)
+		if(*p==ch)
 			return p;
+		p++;
 	}
 	return 0;
 }
