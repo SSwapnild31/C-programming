@@ -11,7 +11,7 @@ void main()
 	int j,k=0,num;
 	for(i=0;i<ele;i++)
 	{
-		if(a[i]==0)
+		if(a[i]<0)
 		{
 			num=a[i];
 			for(j=i;j>k;j--)
