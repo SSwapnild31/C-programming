@@ -6,7 +6,7 @@ void main()
 	printf("Enter array elements : \n");
 	for(i=0;i<ele;)
 	{
-		scanf("%d",&ar[i]);
+		scanf("%d",ar+i);
 		for(j=2;j<ar[i];j++)
 		{
 			if(ar[i]%j==0)
