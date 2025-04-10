@@ -18,6 +18,6 @@ void main()
 	
 	printf("array elements are : ");
 	for(i=0;i<ele;i++)
-		printf("%d ",ar[i]);
+		printf("%d ",*(a+i));
 	printf("\n");
 }
