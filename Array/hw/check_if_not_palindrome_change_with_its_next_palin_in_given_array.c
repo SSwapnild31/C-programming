@@ -42,6 +42,6 @@ void main()
 
 	printf("after ele  : ");
 	for(i=0;i<ele;i++)
-		printf("%d ",a[i]);
+		printf("%d ",*(a+i));
 	printf("\n");
 }
