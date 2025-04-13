@@ -21,7 +21,7 @@ int bitCount_helper(int num,int pos)
 {
 	if(pos<0)
 		return 0;
-	if(num<<pos)
+	if(num>>pos&1)
 		return 1+bitCount_helper(num,pos-1);
 	return bitCount_helper(num,pos-1);
 }
