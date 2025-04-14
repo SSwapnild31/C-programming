@@ -52,11 +52,33 @@ void main()
 	}
 	else if(op==2)
 	{
-		
+		for(i=0;i<ele-1;i++)
+		{
+			for(j=0;j<ele-1-i;j++)
+			{
+				if(strcmp(v[j].name,v[j+1].name)>0)
+				{
+					t=v[j];
+					v[j]=v[j+1];
+					v[j+1]=t;
+				}
+			}
+		}
 	}
 	else if(op==3)
 	{
-		
+		for(i=0;i<ele-1;i++)
+		{
+			for(j=0;j<ele-1-i;j++)
+			{
+				if(v[j].marks>v[j+1].marks)
+				{
+					t=v[j];
+					v[j]=v[j+1];
+					v[j+1]=t;
+				}
+			}
+		}
 	}
 	else
 		printf("unknown option..!");
