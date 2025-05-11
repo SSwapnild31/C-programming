@@ -6,7 +6,7 @@ void main()
 	
 	printf("Enter array ele : ");
 	for(i=0;i<ele;i++)
-		scanf("%d",a+i);
+		scanf("%d",&a[i]);
 	printf("\n");
 	
 	for(i=0,sum=0;i<ele;i++)
