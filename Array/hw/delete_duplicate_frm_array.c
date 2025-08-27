@@ -3,7 +3,7 @@
 void print(int *,int);
 int delete_duplicate(int *,int,int);
 
-void main()
+int main()
 {
 	int a[7],ele,num;
 	ele=sizeof(a)/sizeof(a[0]);
@@ -17,6 +17,8 @@ void main()
 	print(a,ele);
 	ele=delete_duplicate(a,ele,num);
 	print(a,ele);
+
+	return 0;
 }
 
 int delete_duplicate(int *a,int ele,int num)
