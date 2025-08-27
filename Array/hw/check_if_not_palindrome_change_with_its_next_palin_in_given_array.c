@@ -1,5 +1,6 @@
 #include<stdio.h>
-void main()
+
+int main()
 {
 	int a[7],ele,i;
 	ele=sizeof(a)/sizeof(a[0]);
@@ -44,4 +45,6 @@ void main()
 	for(i=0;i<ele;i++)
 		printf("%d ",*(a+i));
 	printf("\n");
+
+	return 0;
 }
