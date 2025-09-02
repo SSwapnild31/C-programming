@@ -4,6 +4,7 @@
 int anagram(char *,char *);
 void sort(char *,int);
 void copy(char *,char *);
+
 int main()
 {	
 	char s1[20],s2[20],p1[20],p2[20];
@@ -41,7 +42,7 @@ int main()
 
 int anagram(char *p,char *q)
 {
-	while(p<q)
+	while(*p)
 	{
 		if(*p!=*q)
 			return 0;
@@ -73,8 +74,11 @@ void copy(char *p,char *s)
 {
 	while(*s)
 	{
-		if((*s='a' && *s<='z') && (*s>='A' && *s<='Z'))
-			*p++=*s;
+		if(*s>='A' && *s<='Z')
+			*p++ = *s+32;
+		if(*s>='a' && *s<='z')
+			*p++ = *s;
+		s++;
 	}
-	*p++='\0';
+	*p='\0';
 }
