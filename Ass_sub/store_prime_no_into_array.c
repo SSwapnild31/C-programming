@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 void main()
 {
 	int ar[5],i,j,ele;
