@@ -15,7 +15,10 @@ int main()
 {
 	char s[50];
 	printf("Enter string : ");
-	scanf("%[^\n]",s);
+	//scanf("%[^\n]",s);
+	
+	fgets(s, sizeof(s), stdin);
+	s[strcspn(s, "\n")] = '\0';
 
 	strRev(s, s+strlen(s)-1);
  	
