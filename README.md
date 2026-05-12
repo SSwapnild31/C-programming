@@ -1,10 +1,10 @@
-# 🖥️C++ Practice Repository 🚀
+# 🖥️C Practice Repository 🚀
 
-This repository contains my C++ practice programs and concept-based implementations.
-I created this repository to strengthen my understanding of Core C++, Object-Oriented Programming (OOP), STL, and problem-solving concepts.
+This repository contains my C practice programs and concept-based implementations.
+I created this repository to strengthen my understanding of Core C and problem-solving concepts.
 
 ## 📚 Topics Covered
-🔹 Core C++
+🔹 Core C
   +  Arrays
   +  Strings
   +  Functions
@@ -12,6 +12,7 @@ I created this repository to strengthen my understanding of Core C++, Object-Ori
   +  Recursion
   +  Dynamic Memory Allocation
   +  File Handling
+  +  Assignments
 
 🔹 Problem Solving
   +  Pattern Programs
